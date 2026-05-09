@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cyalgx67agbcj"]
+
+[ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_ba3pm"]
+
+[node name="ControlsMenu" type="Control" unique_id=1049742956]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=427110585]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=493620139]
+layout_mode = 2
+theme_override_constants/h_separation = 400
+columns = 2
+
+[node name="PauseLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=373561658]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Pause:"
+
+[node name="PauseKeyLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=1877968971]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "p"
+
+[node name="BackButton" type="Button" parent="." unique_id=1562221037 groups=["scene_observer"]]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 109.0
+offset_bottom = 71.0
+text = "<-- Back"
+script = ExtResource("1_ba3pm")
+scene = &"uid://ps8cn30ehahl"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"

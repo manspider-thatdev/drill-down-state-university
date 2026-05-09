@@ -5,7 +5,7 @@ signal beat()
 
 @onready var timer: Timer = $Timer
 
-@export var bpm: int = 100
+@export var bpm: int = 120
 
 var is_on := false
 var beat_length: float:

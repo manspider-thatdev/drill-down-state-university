@@ -4,10 +4,10 @@ extends Control
 @onready var play_button: Button = $HBoxContainer/PlayButton
 @onready var bpm_label: Label = $HBoxContainer/BPMLabel
 
-@export var bpm: int = 100:
+@export var bpm: int = 120:
 	set = set_bpm
-@export var minimum_bpm: int = 60
-@export var maximum_bpm: int = 280
+@export var minimum_bpm: int = 100
+@export var maximum_bpm: int = 200
 @export var bpm_step: int = 5
 
 var is_testing_metronome := false

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_hayap"]
 
-[node name="MainMenu" type="Control" unique_id=1471928656]
+[node name="SettingsMenu" type="Control" unique_id=1471928656]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -92,6 +92,20 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 value = 50.0
+
+[node name="ControlsLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=1631428297]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Controls"
+vertical_alignment = 1
+
+[node name="ControlsButton" type="Button" parent="CenterContainer/GridContainer" unique_id=332934656]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Controls"
+script = ExtResource("1_hayap")
+scene = &"uid://cyalgx67agbcj"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
 
 [node name="BackButton" type="Button" parent="." unique_id=123323104 groups=["scene_observer"]]
 layout_mode = 1
