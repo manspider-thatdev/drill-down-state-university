@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://eh5yhmw1ulgn"]
+
+[ext_resource type="PackedScene" uid="uid://bincvx6bn77n4" path="res://scenes/uis/metronome_ui.tscn" id="1_ykvbp"]
+[ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="2_g4txe"]
+
+[node name="ExhibitionMenu" type="Control" unique_id=659477020]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1896172868]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=1456159938]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayButton" type="Button" parent="HBoxContainer/CenterContainer" unique_id=163708832]
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Play"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1710751301]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer" unique_id=1216924945]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/CenterContainer" unique_id=1278278972]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/CenterContainer/HBoxContainer" unique_id=1516901233]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+text = "<"
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/CenterContainer/HBoxContainer" unique_id=138820677]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "100 Marchers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer/CenterContainer/HBoxContainer" unique_id=2014013501]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+text = ">"
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer/VBoxContainer" unique_id=1104360505]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/CenterContainer2" unique_id=185197518]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer" unique_id=1656439604]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+text = "<"
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer" unique_id=1244289950]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Medium"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer" unique_id=1970964914]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+text = ">"
+
+[node name="MetronomeUI" parent="HBoxContainer/VBoxContainer" unique_id=791961912 instance=ExtResource("1_ykvbp")]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="." unique_id=436907133]
+custom_minimum_size = Vector2(80, 40)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 80.0
+text = "<--Back"
+script = ExtResource("2_g4txe")
+scene = &"uid://b48vwkmp2vg6x"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
+
+[node name="SettingsButton" type="Button" parent="." unique_id=1725960544]
+custom_minimum_size = Vector2(75, 75)
+layout_direction = 3
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 115.0
+offset_bottom = 115.0
+text = "Gear
+Icon"
+script = ExtResource("2_g4txe")
+scene = &"uid://ps8cn30ehahl"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"

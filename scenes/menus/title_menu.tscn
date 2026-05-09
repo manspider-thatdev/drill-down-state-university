@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c73tw1ttpmp56"]
+
+[ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_ij6cu"]
+
+[node name="TitleMenu" type="Control" unique_id=1471928656]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1260843901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer" unique_id=1083966889]
+custom_minimum_size = Vector2(180, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Start"
+script = ExtResource("1_ij6cu")
+scene = &"uid://b48vwkmp2vg6x"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cj8w8x4a2l43m"]
+
+[ext_resource type="AudioStream" uid="uid://dulckau8hchkg" path="res://assets/audio/beats/freesound_community-metronome-85688.mp3" id="1_kd2qf"]
+[ext_resource type="Script" uid="uid://bj6cpylpo1nl8" path="res://scripts/globals/metronome.gd" id="2_gwyvd"]
+
+[node name="Metronome" type="AudioStreamPlayer2D" unique_id=644644851]
+stream = ExtResource("1_kd2qf")
+script = ExtResource("2_gwyvd")

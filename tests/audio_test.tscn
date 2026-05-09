@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bk0lbomutvx4s"]
+
+[ext_resource type="Script" uid="uid://1fift2ho5vm4" path="res://tests/audio_test.gd" id="1_gcrfe"]
+[ext_resource type="PackedScene" uid="uid://1sbn3kjx3ls6" path="res://scenes/command_audio_manager.tscn" id="1_sjuna"]
+
+[node name="AudioTest" type="Control" unique_id=742995566]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gcrfe")
+voice_path = "res://assets/audio/voices/parker"
+
+[node name="Label" type="Label" parent="." unique_id=1891668816]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "TESTING AUDIO FILES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CommandAudioManager" parent="." unique_id=553308386 instance=ExtResource("1_sjuna")]

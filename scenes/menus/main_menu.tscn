@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b48vwkmp2vg6x"]
+
+[ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_xqga4"]
+
+[node name="MainMenu" type="Control" unique_id=1471928656]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1260843901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1879077662]
+layout_mode = 2
+theme_override_constants/separation = 54
+
+[node name="ExhibitionButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=585217976]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Exhibition Mode (Unfinished)"
+script = ExtResource("1_xqga4")
+scene = &"uid://eh5yhmw1ulgn"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
+
+[node name="PracticeButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2060442334]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Practice Mode (In the Works)"
+script = ExtResource("1_xqga4")
+scene = &"uid://cb7ntrinam3mi"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1596411910]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Settings (Unfinished)"
+script = ExtResource("1_xqga4")
+scene = &"uid://ps8cn30ehahl"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
+
+[node name="BackButton" type="Button" parent="." unique_id=918502185]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 109.0
+offset_bottom = 71.0
+text = "<-- Back"
+script = ExtResource("1_xqga4")
+scene = &"uid://c73tw1ttpmp56"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"

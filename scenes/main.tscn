@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://cmdeqdcvwhik"]
+
+[ext_resource type="Script" uid="uid://cvh0cwqtm34mv" path="res://scripts/player.gd" id="1_o5qli"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_color = Color(0, 0.68235296, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_h2yge"]
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[sub_resource type="BoxMesh" id="BoxMesh_1bvp3"]
+material = SubResource("StandardMaterial3D_0xm2m")
+size = Vector3(0.3, 1, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_color = Color(0.75729054, 0.89676017, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7mycd"]
+material = SubResource("StandardMaterial3D_lquwl")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5qli"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_o5qli")
+size = Vector2(50, 100)
+
+[node name="Main" type="Node3D" unique_id=1894915136]
+
+[node name="Player" type="MeshInstance3D" parent="." unique_id=1064777970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("CapsuleMesh_h2yge")
+skeleton = NodePath("")
+script = ExtResource("1_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=563408219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player" unique_id=788642555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Player" unique_id=1092568910]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Player" unique_id=369248864]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Player2" type="MeshInstance3D" parent="." unique_id=149293557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+mesh = SubResource("CapsuleMesh_h2yge")
+skeleton = NodePath("")
+script = ExtResource("1_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player2" unique_id=288245051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player2" unique_id=898455200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Player2" unique_id=145845857]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Player2" unique_id=972345659]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Player3" type="MeshInstance3D" parent="." unique_id=1884519847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+mesh = SubResource("CapsuleMesh_h2yge")
+skeleton = NodePath("")
+script = ExtResource("1_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player3" unique_id=1151113006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player3" unique_id=1869072628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Player3" unique_id=539097016]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Player3" unique_id=1961923151]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Player4" type="MeshInstance3D" parent="." unique_id=1532422515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+mesh = SubResource("CapsuleMesh_h2yge")
+skeleton = NodePath("")
+script = ExtResource("1_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player4" unique_id=1661443629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player4" unique_id=1539227531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Player4" unique_id=1082498973]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Player4" unique_id=32379264]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Player5" type="MeshInstance3D" parent="." unique_id=695783156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = SubResource("CapsuleMesh_h2yge")
+skeleton = NodePath("")
+script = ExtResource("1_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player5" unique_id=1761775687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player5" unique_id=693790158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Player5" unique_id=1380042512]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Player5" unique_id=1162883522]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Player6" type="MeshInstance3D" parent="." unique_id=1950618906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+mesh = SubResource("CapsuleMesh_h2yge")
+skeleton = NodePath("")
+script = ExtResource("1_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player6" unique_id=1929385716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player6" unique_id=510716925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Player6" unique_id=863778251]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Player6" unique_id=859644979]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Player7" type="MeshInstance3D" parent="." unique_id=2034151817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+mesh = SubResource("CapsuleMesh_h2yge")
+skeleton = NodePath("")
+script = ExtResource("1_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player7" unique_id=1977431505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player7" unique_id=1161271003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Player7" unique_id=1175806848]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Player7" unique_id=613113422]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Player8" type="MeshInstance3D" parent="." unique_id=1657620737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+mesh = SubResource("CapsuleMesh_h2yge")
+skeleton = NodePath("")
+script = ExtResource("1_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player8" unique_id=1381533624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player8" unique_id=19031340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Player8" unique_id=500274165]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Player8" unique_id=604763654]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.125, 0.6, -0.4)
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=774938766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_o5qli")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=989602037]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+light_color = Color(1, 1, 0.8784314, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1392554603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0176777, 0)
+mesh = SubResource("PlaneMesh_ig7tw")

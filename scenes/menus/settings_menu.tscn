@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://ps8cn30ehahl"]
+
+[ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_hayap"]
+
+[node name="MainMenu" type="Control" unique_id=1471928656]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1260843901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=404866357]
+layout_mode = 2
+theme_override_constants/h_separation = 400
+columns = 2
+
+[node name="VoiceLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=460563242]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Voice"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/GridContainer" unique_id=1141629009]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/GridContainer/HBoxContainer" unique_id=1645082641]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "<"
+
+[node name="VoiceLabel" type="Label" parent="CenterContainer/GridContainer/HBoxContainer" unique_id=223317881]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Parker"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="CenterContainer/GridContainer/HBoxContainer" unique_id=1656787655]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = ">"
+
+[node name="MetronomeLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=223216977]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Metronome"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/GridContainer" unique_id=842832754]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/GridContainer/HBoxContainer2" unique_id=1866423581]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "<"
+
+[node name="VoiceLabel" type="Label" parent="CenterContainer/GridContainer/HBoxContainer2" unique_id=1351460423]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Free"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="CenterContainer/GridContainer/HBoxContainer2" unique_id=1999087561]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = ">"
+
+[node name="VolumeLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=234260547]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Volume (doesn't work)"
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CenterContainer/GridContainer" unique_id=2138217100]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 50.0
+
+[node name="BackButton" type="Button" parent="." unique_id=123323104 groups=["scene_observer"]]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 109.0
+offset_bottom = 71.0
+text = "<-- Back"
+script = ExtResource("1_hayap")
+scene = &"uid://b48vwkmp2vg6x"
+use_past_scene = true
+metadata/_custom_type_script = "uid://db1x8tmqspf50"

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://oc1henp1hqk3"]
+
+[ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_7ypjv"]
+[ext_resource type="Script" uid="uid://g8rsak5fiutx" path="res://scripts/practice_manager.gd" id="1_wr10j"]
+[ext_resource type="Script" uid="uid://bttkgevrgp1m5" path="res://scripts/command_manager.gd" id="2_ktr86"]
+[ext_resource type="Script" uid="uid://b6nx0u7iqwc22" path="res://scripts/command_pattern.gd" id="4_0rkfg"]
+[ext_resource type="PackedScene" uid="uid://1sbn3kjx3ls6" path="res://scenes/command_audio_manager.tscn" id="5_ed1en"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7ypjv"]
+material = SubResource("StandardMaterial3D_ig7tw")
+size = Vector2(50, 100)
+
+[sub_resource type="Resource" id="Resource_ed1en"]
+script = ExtResource("4_0rkfg")
+max_length = 5
+commands = Array[int]([0, 0])
+metadata/_custom_type_script = "uid://b6nx0u7iqwc22"
+
+[sub_resource type="Resource" id="Resource_0rkfg"]
+script = ExtResource("4_0rkfg")
+min_length = 200
+max_length = 201
+commands = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+metadata/_custom_type_script = "uid://b6nx0u7iqwc22"
+
+[node name="PracticeMode" type="Node3D" unique_id=1720980409]
+script = ExtResource("1_wr10j")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1237621745]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1858587907]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=124029835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0176777, 0)
+mesh = SubResource("PlaneMesh_7ypjv")
+
+[node name="Control" type="Control" parent="." unique_id=537465882]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="Button" parent="Control" unique_id=564942725]
+custom_minimum_size = Vector2(80, 40)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 80.0
+text = "<--Back"
+script = ExtResource("1_7ypjv")
+scene = &"uid://b48vwkmp2vg6x"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
+
+[node name="Label" type="Label" parent="Control" unique_id=277485950]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Ready..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CommandManager" type="Node" parent="." unique_id=617908007]
+script = ExtResource("2_ktr86")
+patterns = Array[ExtResource("4_0rkfg")]([SubResource("Resource_ed1en"), SubResource("Resource_0rkfg")])
+metadata/_custom_type_script = "uid://bttkgevrgp1m5"
+
+[node name="CommandAudioManager" parent="." unique_id=553308386 instance=ExtResource("5_ed1en")]
+
+[connection signal="command_selected" from="CommandManager" to="." method="_on_command_selected"]

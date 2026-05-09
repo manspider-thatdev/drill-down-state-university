@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://cb7ntrinam3mi"]
+
+[ext_resource type="PackedScene" uid="uid://bincvx6bn77n4" path="res://scenes/uis/metronome_ui.tscn" id="1_r1lkr"]
+[ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="2_d0x0j"]
+
+[node name="PracticeMenu" type="Control" unique_id=659477020]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1896172868]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=1456159938]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayButton" type="Button" parent="HBoxContainer/CenterContainer" unique_id=1239123521]
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Play"
+script = ExtResource("2_d0x0j")
+scene = &"uid://oc1henp1hqk3"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1710751301]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer" unique_id=1216924945]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/CenterContainer" unique_id=1635192306]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/CenterContainer/HBoxContainer" unique_id=674059160]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Audio"
+
+[node name="ModeButton" type="CheckButton" parent="HBoxContainer/VBoxContainer/CenterContainer/HBoxContainer" unique_id=907376652]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer/CenterContainer/HBoxContainer" unique_id=1226403072]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Gameplay"
+
+[node name="MetronomeUI" parent="HBoxContainer/VBoxContainer" unique_id=791961912 instance=ExtResource("1_r1lkr")]
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer/VBoxContainer" unique_id=1104360505]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/CenterContainer2" unique_id=185197518]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer" unique_id=1656439604]
+layout_mode = 2
+text = "<"
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer" unique_id=1244289950]
+layout_mode = 2
+text = "Easy"
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer" unique_id=1970964914]
+layout_mode = 2
+text = ">"
+
+[node name="BackButton" type="Button" parent="." unique_id=265754330]
+custom_minimum_size = Vector2(80, 40)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 80.0
+text = "<--Back"
+script = ExtResource("2_d0x0j")
+scene = &"uid://b48vwkmp2vg6x"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
+
+[node name="SettingsButton" type="Button" parent="." unique_id=1804734373]
+custom_minimum_size = Vector2(75, 75)
+layout_direction = 3
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 115.0
+offset_bottom = 115.0
+text = "Gear
+Icon"
+script = ExtResource("2_d0x0j")
+scene = &"uid://ps8cn30ehahl"
+metadata/_custom_type_script = "uid://db1x8tmqspf50"
