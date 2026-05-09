@@ -6,3 +6,5 @@
 [node name="Metronome" type="AudioStreamPlayer2D" unique_id=644644851]
 stream = ExtResource("1_kd2qf")
 script = ExtResource("2_gwyvd")
+
+[node name="Timer" type="Timer" parent="." unique_id=193281358]
