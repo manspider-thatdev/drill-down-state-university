@@ -3,9 +3,14 @@
 [ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_7ypjv"]
 [ext_resource type="Script" uid="uid://g8rsak5fiutx" path="res://scripts/practice_manager.gd" id="1_wr10j"]
 [ext_resource type="Script" uid="uid://bttkgevrgp1m5" path="res://scripts/command_manager.gd" id="2_ktr86"]
-[ext_resource type="Script" uid="uid://b6nx0u7iqwc22" path="res://scripts/command_pattern.gd" id="4_0rkfg"]
 [ext_resource type="PackedScene" uid="uid://1sbn3kjx3ls6" path="res://scenes/command_audio_manager.tscn" id="5_ed1en"]
+[ext_resource type="Script" uid="uid://biailcuxwhr8l" path="res://scripts/patterns/control_pattern.gd" id="6_e31v6"]
 [ext_resource type="PackedScene" uid="uid://w2xdlau8fg5b" path="res://scenes/menus/pause_menu.tscn" id="6_ggjjg"]
+[ext_resource type="Script" uid="uid://dseq5a4b52er4" path="res://scripts/patterns/sequence_pattern.gd" id="7_8t8to"]
+[ext_resource type="Script" uid="uid://c8l0xpfqujv6x" path="res://scripts/patterns/list_pattern.gd" id="8_45ldn"]
+[ext_resource type="Script" uid="uid://bj8dyg0dhu8yl" path="res://scripts/patterns/random_pattern.gd" id="9_pajwc"]
+[ext_resource type="Script" uid="uid://qtouqkdphkd2" path="res://scripts/patterns/conditional_pattern.gd" id="10_ov7m3"]
+[ext_resource type="Script" uid="uid://bqrgpny4at1vh" path="res://scripts/patterns/pick_pattern.gd" id="11_pajwc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
 albedo_color = Color(0, 1, 0, 1)
@@ -13,19 +18,6 @@ albedo_color = Color(0, 1, 0, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_7ypjv"]
 material = SubResource("StandardMaterial3D_ig7tw")
 size = Vector2(50, 100)
-
-[sub_resource type="Resource" id="Resource_ed1en"]
-script = ExtResource("4_0rkfg")
-max_length = 5
-commands = Array[int]([0, 0])
-metadata/_custom_type_script = "uid://b6nx0u7iqwc22"
-
-[sub_resource type="Resource" id="Resource_0rkfg"]
-script = ExtResource("4_0rkfg")
-min_length = 200
-max_length = 201
-commands = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
-metadata/_custom_type_script = "uid://b6nx0u7iqwc22"
 
 [node name="PracticeMode" type="Node3D" unique_id=1720980409]
 script = ExtResource("1_wr10j")
@@ -74,11 +66,109 @@ vertical_alignment = 1
 
 [node name="CommandManager" type="Node" parent="." unique_id=617908007]
 script = ExtResource("2_ktr86")
-patterns = Array[ExtResource("4_0rkfg")]([SubResource("Resource_ed1en"), SubResource("Resource_0rkfg")])
 metadata/_custom_type_script = "uid://bttkgevrgp1m5"
 
 [node name="CommandAudioManager" parent="." unique_id=553308386 instance=ExtResource("5_ed1en")]
 
 [node name="PauseMenu" parent="." unique_id=1904070877 instance=ExtResource("6_ggjjg")]
+
+[node name="ControlPattern" type="Node" parent="." unique_id=43532740]
+script = ExtResource("6_e31v6")
+metadata/_custom_type_script = "uid://biailcuxwhr8l"
+
+[node name="StationaryPattern" type="Node" parent="ControlPattern" unique_id=750463488]
+script = ExtResource("7_8t8to")
+metadata/_custom_type_script = "uid://dseq5a4b52er4"
+
+[node name="ListPattern" type="Node" parent="ControlPattern/StationaryPattern" unique_id=98669642]
+script = ExtResource("8_45ldn")
+commands = Array[int]([0, 1])
+metadata/_custom_type_script = "uid://c8l0xpfqujv6x"
+
+[node name="RandomPattern" type="Node" parent="ControlPattern/StationaryPattern" unique_id=853914470]
+script = ExtResource("9_pajwc")
+max_commands = 6
+commands = Array[int]([0, 1, 14])
+random_matrix = Array[Array]([[15, 80, 5], [50, 15, 35], [50, 5, 45]])
+metadata/_custom_type_script = "uid://bj8dyg0dhu8yl"
+
+[node name="ConditionalPattern" type="Node" parent="ControlPattern/StationaryPattern" unique_id=1121316631]
+script = ExtResource("10_ov7m3")
+metadata/_custom_type_script = "uid://qtouqkdphkd2"
+
+[node name="ListPattern" type="Node" parent="ControlPattern/StationaryPattern/ConditionalPattern" unique_id=1870710357]
+script = ExtResource("8_45ldn")
+commands = Array[int]([1])
+metadata/_custom_type_script = "uid://c8l0xpfqujv6x"
+
+[node name="ForwardPattern" type="Node" parent="ControlPattern" unique_id=79967644]
+script = ExtResource("7_8t8to")
+metadata/_custom_type_script = "uid://dseq5a4b52er4"
+
+[node name="ListPattern" type="Node" parent="ControlPattern/ForwardPattern" unique_id=604810942]
+script = ExtResource("8_45ldn")
+commands = Array[int]([0, 1])
+metadata/_custom_type_script = "uid://c8l0xpfqujv6x"
+
+[node name="RandomPattern" type="Node" parent="ControlPattern/ForwardPattern" unique_id=1250097984]
+script = ExtResource("9_pajwc")
+min_commands = 10
+commands = Array[int]([7, 8, 11])
+random_matrix = Array[Array]([[5, 80, 30], [70, 5, 20], [3, 35, 50]])
+metadata/_custom_type_script = "uid://bj8dyg0dhu8yl"
+
+[node name="ConditionalPattern" type="Node" parent="ControlPattern/ForwardPattern" unique_id=2021377612]
+script = ExtResource("10_ov7m3")
+metadata/_custom_type_script = "uid://qtouqkdphkd2"
+
+[node name="ListPattern" type="Node" parent="ControlPattern/ForwardPattern/ConditionalPattern" unique_id=1417099949]
+script = ExtResource("8_45ldn")
+commands = Array[int]([1])
+metadata/_custom_type_script = "uid://c8l0xpfqujv6x"
+
+[node name="DelayPattern" type="Node" parent="ControlPattern" unique_id=1062569970]
+script = ExtResource("7_8t8to")
+metadata/_custom_type_script = "uid://dseq5a4b52er4"
+
+[node name="PickPattern" type="Node" parent="ControlPattern/DelayPattern" unique_id=560124380]
+script = ExtResource("11_pajwc")
+min_patterns = 1
+max_patterns = 1
+metadata/_custom_type_script = "uid://bqrgpny4at1vh"
+
+[node name="Forward" type="Node" parent="ControlPattern/DelayPattern/PickPattern" unique_id=467619961]
+script = ExtResource("8_45ldn")
+commands = Array[int]([7])
+metadata/_custom_type_script = "uid://c8l0xpfqujv6x"
+
+[node name="Backward" type="Node" parent="ControlPattern/DelayPattern/PickPattern" unique_id=267057124]
+script = ExtResource("8_45ldn")
+commands = Array[int]([8])
+metadata/_custom_type_script = "uid://c8l0xpfqujv6x"
+
+[node name="RandomPattern" type="Node" parent="ControlPattern/DelayPattern" unique_id=625503600]
+script = ExtResource("9_pajwc")
+min_commands = 5
+max_commands = 14
+commands = Array[int]([4, 5, 6])
+random_matrix = Array[Array]([[5, 5, 5], [5, 5, 5], [5, 5, 5]])
+metadata/_custom_type_script = "uid://bj8dyg0dhu8yl"
+
+[node name="FlankPattern" type="Node" parent="ControlPattern" unique_id=2103584245]
+script = ExtResource("7_8t8to")
+metadata/_custom_type_script = "uid://dseq5a4b52er4"
+
+[node name="RandomPattern" type="Node" parent="ControlPattern/FlankPattern" unique_id=1038993392]
+script = ExtResource("9_pajwc")
+min_commands = 4
+commands = Array[int]([9, 10, 12, 13])
+random_matrix = Array[Array]([[30, 25, 25, 15], [25, 30, 15, 25], [30, 0, 2, 40], [0, 30, 40, 2]])
+metadata/_custom_type_script = "uid://bj8dyg0dhu8yl"
+
+[node name="RandomPattern" type="Node" parent="ControlPattern" unique_id=961311747]
+script = ExtResource("9_pajwc")
+commands = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+random_matrix = Array[Array]([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1], [1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])
+metadata/_custom_type_script = "uid://bj8dyg0dhu8yl"
 
 [connection signal="command_selected" from="CommandManager" to="." method="_on_command_selected"]
