@@ -1,8 +1,8 @@
 extends Control
 
 
-@onready var play_button: Button = $HBoxContainer/PlayButton
-@onready var bpm_label: Label = $HBoxContainer/BPMLabel
+@onready var play_button: Button = $PanelContainer/HBoxContainer/PlayButton
+@onready var bpm_label: Label = $PanelContainer/HBoxContainer/BPMLabel
 
 @export var bpm: int = 120:
 	set = set_bpm

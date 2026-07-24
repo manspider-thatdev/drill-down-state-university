@@ -1,132 +1,49 @@
 [gd_scene format=3 uid="uid://bincvx6bn77n4"]
 
+[ext_resource type="Theme" uid="uid://dsdr7wfws52lf" path="res://assets/ui/themes/metronome.tres" id="1_6inma"]
 [ext_resource type="Script" uid="uid://4eb42nmih68g" path="res://scripts/uis/metronome_ui.gd" id="1_dqg5i"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xehbw"]
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7555j"]
+bg_color = Color(0.84313726, 0.74509805, 0.4117647, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa5cc"]
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_niuph"]
+bg_color = Color(0.7540339, 0.65789276, 0.3267022, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17eu1"]
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ij41i"]
+bg_color = Color(0.84313726, 0.74509805, 0.4117647, 1)
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqg5i"]
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0xkk"]
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="Theme" id="Theme_dqg5i"]
-Button/styles/focus = SubResource("StyleBoxFlat_xehbw")
-Button/styles/hover = SubResource("StyleBoxFlat_qa5cc")
-Button/styles/hover_pressed = SubResource("StyleBoxFlat_17eu1")
-Button/styles/normal = SubResource("StyleBoxFlat_dqg5i")
-Button/styles/pressed = SubResource("StyleBoxFlat_j0xkk")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xrso"]
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmpu2"]
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2th6d"]
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76dw0"]
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xi5g"]
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_detail = 1
-
-[sub_resource type="Theme" id="Theme_4vw3e"]
-Button/styles/focus = SubResource("StyleBoxFlat_3xrso")
-Button/styles/hover = SubResource("StyleBoxFlat_nmpu2")
-Button/styles/hover_pressed = SubResource("StyleBoxFlat_2th6d")
-Button/styles/normal = SubResource("StyleBoxFlat_76dw0")
-Button/styles/pressed = SubResource("StyleBoxFlat_3xi5g")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgwwr"]
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4vw3e"]
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1t0d"]
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxd4l"]
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8ivn"]
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-corner_detail = 1
-
-[sub_resource type="Theme" id="Theme_0sln8"]
-Button/styles/focus = SubResource("StyleBoxFlat_kgwwr")
-Button/styles/hover = SubResource("StyleBoxFlat_4vw3e")
-Button/styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_t1t0d")
-Button/styles/normal = SubResource("StyleBoxFlat_rxd4l")
-Button/styles/pressed = SubResource("StyleBoxFlat_b8ivn")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hwqh"]
+bg_color = Color(0.7540339, 0.65789276, 0.3267022, 1)
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [node name="MetronomeUI" type="CenterContainer" unique_id=1754460559]
 offset_right = 408.0
 offset_bottom = 140.0
+theme = ExtResource("1_6inma")
 script = ExtResource("1_dqg5i")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2050694520]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=45837916]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=2050694520]
 custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="HBoxContainer" unique_id=2062440506]
+[node name="PlayButton" type="Button" parent="PanelContainer/HBoxContainer" unique_id=2062440506]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 4
-theme = SubResource("Theme_dqg5i")
 toggle_mode = true
 text = "0"
 
-[node name="BPMLabel" type="Label" parent="HBoxContainer" unique_id=743298174]
+[node name="BPMLabel" type="Label" parent="PanelContainer/HBoxContainer" unique_id=743298174]
 custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
 size_flags_vertical = 1
@@ -135,22 +52,30 @@ text = "100bpm"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1971661536]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1971661536]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="UpButton" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=740165437]
+[node name="UpButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=740165437]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 3
-theme = SubResource("Theme_4vw3e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7555j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7555j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_niuph")
+theme_override_styles/focus = SubResource("StyleBoxFlat_niuph")
+text = "/\\"
 
-[node name="DownButton" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1053913485]
+[node name="DownButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=1053913485]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 3
-theme = SubResource("Theme_0sln8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ij41i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ij41i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8hwqh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8hwqh")
+text = "\\/"
 
-[connection signal="toggled" from="HBoxContainer/PlayButton" to="." method="_on_play_button_toggled"]
-[connection signal="button_down" from="HBoxContainer/VBoxContainer/UpButton" to="." method="_on_up_button_down"]
-[connection signal="button_down" from="HBoxContainer/VBoxContainer/DownButton" to="." method="_on_down_button_down"]
+[connection signal="toggled" from="PanelContainer/HBoxContainer/PlayButton" to="." method="_on_play_button_toggled"]
+[connection signal="button_down" from="PanelContainer/HBoxContainer/VBoxContainer/UpButton" to="." method="_on_up_button_down"]
+[connection signal="button_down" from="PanelContainer/HBoxContainer/VBoxContainer/DownButton" to="." method="_on_down_button_down"]

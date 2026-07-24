@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cyalgx67agbcj"]
 
 [ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_ba3pm"]
+[ext_resource type="Theme" uid="uid://dfxvnufmwoiea" path="res://assets/ui/themes/primary.tres" id="1_ibk35"]
 
 [node name="ControlsMenu" type="Control" unique_id=1049742956]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ibk35")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=427110585]
 layout_mode = 1
@@ -43,4 +45,5 @@ offset_bottom = 71.0
 text = "<-- Back"
 script = ExtResource("1_ba3pm")
 scene = &"uid://ps8cn30ehahl"
+use_past_scene = true
 metadata/_custom_type_script = "uid://db1x8tmqspf50"

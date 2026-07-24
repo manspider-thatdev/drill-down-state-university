@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cb7ntrinam3mi"]
 
+[ext_resource type="Theme" uid="uid://dfxvnufmwoiea" path="res://assets/ui/themes/primary.tres" id="1_d0x0j"]
 [ext_resource type="PackedScene" uid="uid://bincvx6bn77n4" path="res://scenes/uis/metronome_ui.tscn" id="1_r1lkr"]
 [ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="2_d0x0j"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_d0x0j")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1896172868]
 layout_mode = 1

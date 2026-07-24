@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b48vwkmp2vg6x"]
 
+[ext_resource type="Theme" uid="uid://dfxvnufmwoiea" path="res://assets/ui/themes/primary.tres" id="1_ovrgc"]
 [ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_xqga4"]
 
 [node name="MainMenu" type="Control" unique_id=1471928656]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ovrgc")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1260843901]
 layout_mode = 1

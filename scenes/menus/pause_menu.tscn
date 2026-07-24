@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfwm1dqjpnm64" path="res://scripts/uis/pause_menu.gd" id="1_7unhi"]
 [ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_fwndu"]
+[ext_resource type="Theme" uid="uid://dfxvnufmwoiea" path="res://assets/ui/themes/primary.tres" id="1_gsnt3"]
 
 [node name="PauseMenu" type="Control" unique_id=1904070877]
 process_mode = 3
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_gsnt3")
 script = ExtResource("1_7unhi")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1175551453]

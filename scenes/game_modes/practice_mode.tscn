@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://db1x8tmqspf50" path="res://scripts/uis/scene_swap_button.gd" id="1_7ypjv"]
 [ext_resource type="Script" uid="uid://g8rsak5fiutx" path="res://scripts/practice_manager.gd" id="1_wr10j"]
 [ext_resource type="Script" uid="uid://bttkgevrgp1m5" path="res://scripts/command_manager.gd" id="2_ktr86"]
+[ext_resource type="Theme" uid="uid://dfxvnufmwoiea" path="res://assets/ui/themes/primary.tres" id="2_ov7m3"]
 [ext_resource type="PackedScene" uid="uid://1sbn3kjx3ls6" path="res://scenes/command_audio_manager.tscn" id="5_ed1en"]
 [ext_resource type="Script" uid="uid://biailcuxwhr8l" path="res://scripts/patterns/control_pattern.gd" id="6_e31v6"]
 [ext_resource type="PackedScene" uid="uid://w2xdlau8fg5b" path="res://scenes/menus/pause_menu.tscn" id="6_ggjjg"]
@@ -47,6 +48,7 @@ offset_left = 40.0
 offset_top = 40.0
 offset_right = 120.0
 offset_bottom = 80.0
+theme = ExtResource("2_ov7m3")
 text = "<--Back"
 script = ExtResource("1_7ypjv")
 scene = &"uid://b48vwkmp2vg6x"
