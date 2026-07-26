@@ -31,6 +31,7 @@ folder_colors={
 "res://assets/audio/": "orange",
 "res://assets/audio/beats/": "green",
 "res://assets/audio/voices/": "purple",
+"res://assets/images/": "blue",
 "res://assets/ui/": "yellow",
 "res://assets/ui/themes/": "teal",
 "res://scenes/": "blue",
