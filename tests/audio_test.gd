@@ -16,7 +16,7 @@ func _ready() -> void:
 	dir.list_dir_begin()
 	var file_name: String = dir.get_next()
 	
-	Metronome.bpm = 120
+	Metronome.bpm = 105
 	Metronome.turn_on()
 	
 	while file_name != "":
@@ -28,7 +28,9 @@ func _ready() -> void:
 		await Metronome.beat
 		await Metronome.beat
 		await Metronome.beat
-		command_audio_manager.play(voice_path + "/" + file_name)
+		command_audio_manager.play(
+			voice_path + "/" + file_name
+		)
 		label.text = voice_path + "/" + file_name
 		file_name = dir.get_next()
 	

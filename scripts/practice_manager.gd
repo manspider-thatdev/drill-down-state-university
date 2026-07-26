@@ -24,7 +24,7 @@ func _on_command_selected(command: int) -> void:
 	if command == Commands.NOTHING:
 		return
 	
-	var line_path: StringName = "res://assets/audio/voices/parker/"+command_string+".mp3"
+	var line_path: StringName = "res://assets/audio/voices/parker/120"+command_string+".mp3"
 	command_audio_manager.play(line_path)
 	
 	await Metronome.beat
