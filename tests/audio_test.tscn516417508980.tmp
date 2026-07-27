@@ -40,10 +40,6 @@ popup/item_6/id = 6
 popup/item_7/text = "195"
 popup/item_7/id = 7
 
-[node name="StartButton" type="Button" parent="HBoxContainer" unique_id=303592454]
-layout_mode = 2
-text = "Start"
-
 [node name="Label" type="Label" parent="." unique_id=1891668816]
 layout_mode = 1
 anchors_preset = 15
@@ -59,4 +55,3 @@ vertical_alignment = 1
 [node name="CommandAudioManager" parent="." unique_id=553308386 instance=ExtResource("1_sjuna")]
 
 [connection signal="item_selected" from="HBoxContainer/TempoOption" to="." method="_on_tempo_option_item_selected"]
-[connection signal="button_down" from="HBoxContainer/StartButton" to="." method="_on_start_button_down"]
